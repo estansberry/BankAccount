@@ -3,9 +3,10 @@ public class BankAccount{
   private int accountID;
   private String password;
 
-  public BankAccount(double balance, int accountID){
-    balance = balance;
-    accountID = accountID;
+  public BankAccount(int a, String p){
+    balance = 0.0;
+    accountID = a;
+    password = p;
   }
   public Boolean deposit(double amount){
     if (amount >= 0){
@@ -28,7 +29,7 @@ public class BankAccount{
     newstr = accountID + "\t" + balance;
     return(newstr);
   }
-  
+
   public double getBalance(){
     return(balance);
   }
