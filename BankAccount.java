@@ -26,7 +26,7 @@ public class BankAccount{
   }
   public String toString(){
     String newstr = "";
-    newstr = accountID + "\t" + balance;
+    newstr = "#" + accountID + "\t" + "$" + balance;
     return(newstr);
   }
 
@@ -39,4 +39,14 @@ public class BankAccount{
   public void setPassword(String newpass){
     password = newpass;
   }
+  private boolean authenticate(String pass){
+    return(password == pass);
+  }
+  public boolean trasnferTo(BankAccount other, double amount, String p){
+    if(authenticate(p)){
+      return(other.deposit(amount));
+    }else{
+      return(false);
+  }
+}
 }
