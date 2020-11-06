@@ -42,7 +42,7 @@ public class BankAccount{
   private boolean authenticate(String pass){
     return(password == pass);
   }
-  public boolean trasnferTo(BankAccount other, double amount, String p){
+  public boolean transferTo(BankAccount other, double amount, String p){
     if(authenticate(p)){
       return(other.deposit(amount));
     }else{
